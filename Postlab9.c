@@ -15,6 +15,7 @@ int main(){
         scanf("%d",&type);
         if (type==1)
         {
+
             while (1)
         {
             printf("Enter the Seat Number(1-30) = ");
