@@ -6,7 +6,10 @@ int main(){
     int Seat[100]={0};
     while (1)
     {
-        printf("\n----------------------------------------------------------------------------------------------------\n\t\t\t\tEnter the Type of Seat :- \nPress 1 for \"1st Class\" \tPress 2 for\"Economy Class\" \tPress 3 for \"Exit\" the Programm \n-----------------------------------------------------------------------------------------------------");
+        printf("\n");
+        printf("----------------------------------------------------------------------------------------------------");
+        printf("\n\t\t\t\tEnter the Type of Seat :- \nPress 1 for \"1st Class\" \tPress 2 for\"Economy Class\" \tPress 3 for \"Exit\" the Programm \n");
+        printf("-----------------------------------------------------------------------------------------------------");
         printf("\nYour Choice = ");
         choice:
         scanf("%d",&type);
@@ -31,31 +34,36 @@ int main(){
             }
         }
             printf("Your Seat Number is %d in First Class Section",Seat_Number);
-        }else if (type==2){
+        }
+        else if (type == 2) {
             while (1)
-        {
-            printf("Enter the Seat Number(31-100) = ");
-            scanf("%d",&Seat_Number);
-            if (Seat[Seat_Number-1]==0)
             {
-            if (Seat_Number>=31 && Seat_Number<=100)
-            {
-                Seat[Seat_Number-1]=1;
-                break;
-            }else
-            {
-                printf("Please !! Enter The Correct Seat Number.\n");
+                printf("Enter the Seat Number(31-100) = ");
+                scanf("%d", &Seat_Number);
+                if (Seat[Seat_Number - 1] == 0)
+                {
+                    if (Seat_Number >= 31 && Seat_Number <= 100)
+                    {
+                        Seat[Seat_Number - 1] = 1;
+                        break;
+                    }
+                    else
+                    {
+                        printf("Please !! Enter The Correct Seat Number.\n");
+                    }
+                }
+                else {
+                    printf("Please !! Enter The Correct Chice.\n");
+                }
             }
-        }else{
-            printf("Please !! Enter The Correct Chice.\n");
+            printf("Your Seat Number is %d in Economy Class Section", Seat_Number);
         }
-        }
-            printf("Your Seat Number is %d in Economy Class Section",Seat_Number);
-        }else if (type==3)
+        else if (type == 3)
         {
             printf("Programm is closed.");
             break;
-        }else{
+        }
+        else {
             printf("Enter The Correct Choice.");
         }
     }
